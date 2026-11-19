@@ -3,25 +3,18 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   color: #333333;
   background: #F5F3ED;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-::selection {
-  background: #A4873E;
-  color: #FFFFFF;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-height: 100vh; font-family: Arial, Helvetica, sans-serif; }
+a { text-decoration: none; }
+button, input { font: inherit; }
+::selection { background: #A4873E; color: #FFFFFF; }

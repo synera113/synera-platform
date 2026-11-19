@@ -1,24 +1,31 @@
-# SYNERA Technologies
+# Setup and current implementation status
 
-**Intelligent Systems. Smarter Business.**
+## UI preview
 
-SYNERA is a secure multi-tenant SaaS platform for businesses that need centralized operations, CRM, scheduling, automation, and reporting.
+Requires Node.js 20+ and npm.
 
-## Repository status
+```bash
+npm install
+npm run dev
+```
 
-This repository is currently in the architecture and planning stage. Application implementation is not yet started.
+Open `http://localhost:3000`. Available UI routes:
 
-## Planning documents
+- `/` — marketing landing page
+- `/login` — login UI draft
+- `/register` — registration UI draft
+- `/organization/new` — organization setup UI draft
 
-- [Architecture](ARCHITECTURE.md)
-- [Project structure](PROJECT_STRUCTURE.md)
-- [Database schema plan](DATABASE_SCHEMA.md)
-- [Development plan](DEVELOPMENT_PLAN.md)
+## Important: UI-only draft
 
-## Brand palette
+Supabase is not configured. Login, registration, and organization creation are intentionally disabled and do not submit or store data. Do not treat this as authentication or a production-ready application. Tenant isolation and authorization are not implemented in this UI-only stage.
 
-- Deep forest green: `#0E3010`
-- Charcoal: `#333333`
-- Gold: `#A4873E`
-- Light background: `#F5F3ED`
-- White: `#FFFFFF`
+To enable real flows later, configure a Supabase project and secure environment variables following `SETUP.md`. Never commit `.env.local` or expose a service-role key to the browser.
+
+## Verify
+
+```bash
+npm run build
+```
+
+The repository also defines lint/test scripts; run them after installing dependencies and configure any missing test tooling before relying on them.
